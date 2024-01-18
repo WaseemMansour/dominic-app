@@ -1,7 +1,25 @@
-# Getting Started with Create React App
+# Dominic's Coding Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+## # App Characteristics
+- A simple Posts React App built in TypeScript and utilizing Redux for State Management.
+- CRUD operations Using JSONPlacholder API endpoints.
+- Handling asynchronous actions such as API calls using Redux.
 
+## # Fetching Data:
+- Use the GET /posts API endpoint to retrieve a list of posts from the JSONPlaceholder API.
+
+## # Editing Data:
+- Use the GET /posts/{postId} API endpoint to fetch the data of a specific post for editing.
+- Use the PUT /posts/{postId} or PATCH /posts/{postId} API endpoint to update the post after editing.
+
+## # Deleting Data:
+- Use the DELETE /posts/{postId} API endpoint to delete a specific post from the application and the API.
+
+## # Updating Data:
+- Use the POST /posts API endpoint to create a new post.
+- Use the PUT /posts/{postId} or PATCH /posts/{postId} API endpoint to update a post.
+
+---
 ## Available Scripts
 
 In the project directory, you can run:
