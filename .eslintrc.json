@@ -1,0 +1,173 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "react-hooks", "sonarjs", "unicorn", "unused-imports"],
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:import/typescript"
+  ],
+  "root": true,
+  "env": {
+    "node": true,
+    "browser": true,
+    "jest": true
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      },
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "rules": {
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": ["@mui/*/*/*"]
+      }
+    ],
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": ["function-declaration", "arrow-function"],
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "@typescript-eslint/naming-convention": "off",
+    "react/no-array-index-key": "off",
+    "unicorn/no-array-for-each": "off",
+    "react/jsx-uses-react": "off",
+    "unicorn/no-null": "off",
+    "import/prefer-default-export": "off",
+    "react/prop-types": "off",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "warn",
+    "consistent-return": "off",
+    "react/react-in-jsx-scope": "off",
+    "jsx-quotes": ["error", "prefer-single"],
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "implicit-arrow-linebreak": "off",
+    "import/no-named-as-default": "off",
+    "sonarjs/no-nested-template-literals": "off",
+    "new-cap": "off",
+    "react/no-unused-prop-types": "off",
+    "max-len": [
+      "warn",
+      {
+        "code": 125,
+        "ignorePattern": "^import\\s.+\\sfrom\\s.+;$",
+        "ignoreUrls": true
+      }
+    ],
+    "unicorn/numeric-separators-style": [
+      "error",
+      {
+        "number": {
+          "minimumDigits": 7,
+          "groupLength": 3
+        }
+      }
+    ],
+    "jsx-a11y/no-static-element-interactions": "off",
+    "no-unused-vars": "off",
+    "import/no-extraneous-dependencies": "off",
+    "unused-imports/no-unused-imports-ts": "warn",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
+      }
+    ],
+    "no-restricted-globals": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".jsx", ".tsx"]
+      }
+    ],
+    "@typescript-eslint/indent": [
+      "error",
+      2
+    ],
+    "react/jsx-no-useless-fragment": "off",
+    "jsx-a11y/alt-text": "off",
+    "unicorn/prevent-abbreviations": "off",
+    "@typescript-eslint/comma-dangle": [
+      "error",
+      {
+        "arrays": "never",
+        "objects": "always-multiline",
+        "imports": "only-multiline",
+        "exports": "only-multiline",
+        "functions": "never"
+      }
+    ],
+    "object-curly-newline": [
+      "error",
+      {
+        "ObjectExpression": {
+          "multiline": true,
+          "minProperties": 4
+        },
+        "ObjectPattern": {
+          "multiline": true,
+          "minProperties": 4
+        },
+        "ImportDeclaration": {
+          "multiline": true,
+          "minProperties": 3
+        },
+        "ExportDeclaration": {
+          "multiline": true,
+          "minProperties": 3
+        }
+      }
+    ],
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": ["state"]
+      }
+    ],
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "react/jsx-key": "error",
+    "unicorn/consistent-destructuring": "off",
+    "unicorn/filename-case": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/require-default-props": "off",
+    "no-sparse-arrays": "off",
+    "react/jsx-curly-spacing": [
+      2,
+      {
+        "when": "always",
+        "allowMultiline": false
+      }
+    ],
+    "unicorn/no-negated-condition": "off"
+  },
+  "overrides": [
+    {
+      "files": ["src/modules/core/presentation/pages/**/*.tsx"],
+      "rules": {
+        "unused-imports/no-unused-imports-ts": "off"
+      }
+    }
+  ]
+}
