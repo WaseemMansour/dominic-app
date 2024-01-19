@@ -1,9 +1,13 @@
 # Dominic's Coding Challenge
 
-## # App Characteristics
+## # App Characteristics:
 - A simple Posts React App built in TypeScript and utilizing Redux for State Management.
 - CRUD operations Using JSONPlacholder API endpoints.
 - Handling asynchronous actions such as API calls using Redux.
+
+### ## Note:
+- *For such a simple state, Redux is an overkill,
+React Query would be way much better for fetching and caching data.*
 
 ## # Fetching Data:
 - Use the GET /posts API endpoint to retrieve a list of posts from the JSONPlaceholder API.
