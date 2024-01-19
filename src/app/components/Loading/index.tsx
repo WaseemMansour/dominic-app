@@ -1,10 +1,9 @@
 import React from 'react';
-import { Spin } from 'antd';
-import { StyledLoadingContainer } from './styles';
+import { StyledLoadingContainer, StyledSpin } from './styles';
 
 const Loading: React.FC = () => (
   <StyledLoadingContainer>
-    <Spin tip='Loading...' />
+    <StyledSpin tip='Loading...' />
   </StyledLoadingContainer>
 );
 
